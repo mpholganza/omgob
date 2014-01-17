@@ -8,7 +8,12 @@ Template.foodSubmit.events({
 			description: $(e.target).find('[name=description]').val()
 		}
 		
-		food._id = Food.insert(food);
-		Router.go('foodPage', food);
+		Meteor.call('submitFood', food, function(error, id) {
+			if (error) {
+				return alert(error.reason)
+			}
+			
+			Router.go('foodPage', {_id: id});
+		});
 	}
 });

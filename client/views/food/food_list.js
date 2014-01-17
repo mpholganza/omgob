@@ -1,5 +1,5 @@
 Template.foodList.helpers({
   foodList: function() {
-    return Food.find();
+    return Food.find({}, {sort: {submitted: -1}});
   }
 });
