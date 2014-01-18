@@ -1,5 +1,18 @@
 Food = new Meteor.Collection('food');
 
+Food.allow({
+	update: ownsDocument,
+	remove: ownsDocument
+});
+
+/*Food.deny({
+	update: function(userId, food, fieldNames) {
+		// may only edit the following fields:
+		return (_.without(fieldsNames, 'name', 'price', 'description') > 0);
+	}
+});*/
+
+
 Meteor.methods({
 	submitFood: function(foodAttributes) {
 		var user = Meteor.user();
