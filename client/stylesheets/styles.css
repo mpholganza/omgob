@@ -35,23 +35,23 @@ body {
     margin: 7px 12px 0 0;
     float: left;
 }
-.food-item .post-content { float: left }
-.food-item .post-content h3 {
+.food-item .food-content { float: left }
+.food-item .food-content h3 {
     margin: 0;
     line-height: 1.4;
     font-size: 18px;
 }
-.food-item .post-content h3 a {
+.food-item .food-content h3 a {
     display: inline-block;
     margin-right: 5px;
 }
-.food-item .post-content h3 span {
+.food-item .food-content h3 span {
     font-weight: normal;
     font-size: 14px;
     display: inline-block;
     color: #aaaaaa;
 }
-.food-item .post-content p { margin: 0 }
+.food-item .food-content p { margin: 0 }
 .food-item .discuss {
     display: block;
     float: right;

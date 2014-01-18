@@ -1,7 +1,13 @@
 <template name="foodItem">
   <div class="food-item">
-    {{name}}, {{price}}
-		<a href="{{pathFor 'foodPage'}}" class="discuss btn">Mmm</a>
+		<div class="food-content">
+   		<h3>{{name}} {{price}}</h3>
+			<p>{{description}}</p>
+		</div>
+		{{#if ownFood}}
+		<a href="{{pathFor 'foodEdit'}}" class="discuss btn">Edit</a>
+		{{/if}}
+		<a href="{{pathFor 'foodPage'}}" class="discuss btn">Info</a>
   </div>
 </template>
 
