@@ -6,7 +6,7 @@ Template.foodSubmit.events({
 			name: $(e.target).find('[name=name]').val(),
 			price: $(e.target).find('[name=price]').val(),
 			description: $(e.target).find('[name=description]').val()
-		}
+		};
 		
 		Meteor.call('submitFood', food, function(error, id) {
 			if (error) {
